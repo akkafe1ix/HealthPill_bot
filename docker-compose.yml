@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  medication-bot:
+    build: .
+    volumes:
+      - ./data:/app/data
+    env_file:
+      - .env
+    restart: unless-stopped
